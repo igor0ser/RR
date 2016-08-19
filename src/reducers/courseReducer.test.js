@@ -22,8 +22,7 @@ describe('Course Reducer', () => {
 		const newState = courseReducer(initialState, action);
 		const updatedCourse = newState.find(a => a.id === course.id);
 		const untouchedCourse = newState.find(a => a.id === 'A');
-		console.log(newState);
-
+		
 		expect(newState.length).toEqual(3);
 		expect(untouchedCourse.title).toEqual('A');
 		expect(updatedCourse.title).toEqual('New title');
